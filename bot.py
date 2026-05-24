@@ -31,8 +31,12 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-MONGODB_URI = os.getenv("MONGODB_URI")
+BOT_TOKEN = os.getenv("BOT_TOKEN").strip()
+print("TOKEN EXISTS:", bool(BOT_TOKEN))
+print("TOKEN LENGTH:", len(BOT_TOKEN))
+print("MONGO EXISTS:", bool(MONGODB_URI))
+
+
 DATABASE_NAME = os.getenv("DATABASE_NAME", "attack_bot")
 API_URL = os.getenv("API_URL")
 API_KEY = os.getenv("API_KEY")
