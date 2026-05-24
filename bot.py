@@ -32,6 +32,7 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN").strip()
+MONGODB_URI = os.getenv("MONGODB_URI")
 print("TOKEN EXISTS:", bool(BOT_TOKEN))
 print("TOKEN LENGTH:", len(BOT_TOKEN))
 print("MONGO EXISTS:", bool(MONGODB_URI))
